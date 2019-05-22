@@ -33,7 +33,7 @@ So the query will eqqual to :
 AND
 (urns:schemas:httpmail:textdescription LIKE '%Initalization completed%')
 AND
-(urn:schemas:mailheader:date > '31/01/2019 14:00:00')
+(urn:schemas:mailheader:date > '30/01/2019 14:00:00' AND urn:schemas:mailheader:date < '31/01/2019 07:50:00')
 ```
 
 #### The threading
