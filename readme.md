@@ -3,9 +3,13 @@
 Sometimes, we want to automatize the email analysis. 
 
 
-### The Outllok 
+### The Outlook properties
 
 #### The query
+
+To build the query, we have to use the Uniform Resource Name (urn) to get the email's propoerties like subject, content and and date.
+
+The main/useful URNs are:
 
 
 |Field       |                                       |
@@ -19,7 +23,12 @@ For example, we want to get the emails:
 * content with :
 * date : between and 
 
+#### The threading
 
+Beware, the response sent back by Outlook is received on another thread.
+
+
+### The C\# code 
 
 ```cs
 using System;
