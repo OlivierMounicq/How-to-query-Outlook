@@ -25,7 +25,9 @@ For example, we want to get the emails:
 
 #### The threading
 
-Beware, the response sent back by Outlook is received on another thread.
+Beware, the response sent back by Outlook is received on another thread (different from the main). 
+To avoid some troubles, especially when you want to execute several queries, you should use either a manualResetEventSlim or a task.
+
 
 
 ### The C\# code 
