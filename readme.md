@@ -18,10 +18,23 @@ The main/useful URNs are:
 |Content     | urn:schemas:httpmail:textdescription  |
 |date        | urn:schemas:mailheader:date           |
 
+The date format : dd/MM/yyyy HH:mm:ss
+
+
 For example, we want to get the emails:
-* subject : 
-* content with :
-* date : between and 
+* subject : __[PROD] - Report MyApp__
+* content with : __Initalization completed__
+* date : between 2019-01-30 14:00:00 and 2019-01-31 07:50:00
+
+So the query will eqqual to : 
+
+```html
+(urns:schemas:mailheader:subject LIKE '%[PROD] - Report MyApp%')
+AND
+(urns:schemas:httpmail:textdescription LIKE '%Initalization completed%')
+AND
+(urn:schemas:mailheader:date > '31/01/2019 14:00:00')
+```
 
 #### The threading
 
